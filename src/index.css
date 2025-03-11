@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  /* overflow: hidden; */
+}
+
+.hero-background {
+  background-image: url("../src/assets/hero-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-background {
+  background-image: url("../src/assets/about-background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mask-group {
+  background-image: url("../src/assets/Mask-group.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin-inline: auto;
+  height: 82px;
+  /* margin-top: 5rem; */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scrolling-text {
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: scrollleft 15s linear infinite;
+}
+
+@keyframes scrollleft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.item {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .item {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+  .scrolling-text {
+    gap: 1rem; /* Ensure proper spacing */
+    animation-duration: 15s; /* Slow down animation for mobile */
+  }
+}
