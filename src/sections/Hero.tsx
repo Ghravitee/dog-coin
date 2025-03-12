@@ -1,24 +1,12 @@
-import { useState } from "react";
 import Navbar from "./Navbar";
-import Button from "../components/Button";
-
 import dogCoin from "../assets/dog-coin.png";
 import cloud1 from "../assets/cloud-1.png";
 import cloud2 from "../assets/cloud-2.png";
 import InfiniteScroll from "../components/InfiniteScroll";
 import SocialIcons from "../components/SocialIcons";
+import Copy from "../components/Copy";
 
 const Hero = () => {
-  const [hasCopied, setHasCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText("4S94Bfigd8f235dHkI04JfkXs51tPump");
-    setHasCopied(true);
-    setTimeout(() => {
-      setHasCopied(false);
-    }, 2000);
-  };
-
   return (
     <section className="min-h-screen hero-background pt-[54px] ">
       <Navbar />
@@ -39,23 +27,7 @@ const Hero = () => {
           </p>
 
           {/* Copy Address */}
-          <div
-            onClick={handleCopy}
-            className="flex flex-col sm:flex-row justify-center items-center bg-white border border-b-[7px] border-b-black rounded-2xl py-3 px-4 max-w-full sm:w-fit cursor-pointer mb-[13px]"
-          >
-            <h2 className="text-[18px] sm:text-[22.9px] truncate max-w-[260px] sm:max-w-none">
-              4S94Bfigd8f235dHkI04JfkXs51tPump
-            </h2>
-
-            <div className="mt-2 sm:mt-0 sm:ml-3">
-              {hasCopied ? (
-                <Button content="Copied" />
-              ) : (
-                <Button content="Copy" />
-              )}
-            </div>
-          </div>
-
+          <Copy />
           {/* Join the community */}
           <h2 className="text-[20px] sm:text-[24px] font-medium text-white mb-4">
             Join the community
@@ -86,14 +58,14 @@ const Hero = () => {
       </div>
       <div className="relative">
         <InfiniteScroll
-          orientation="rotate-4"
+          orientation="skew-3"
           background="bg-[#FFCF00]"
           textColor="text-[#000000]"
           border="border-y-2 border-y-[#000000]"
           position="absolute z-40 top-20"
         />
         <InfiniteScroll
-          orientation="-rotate-4"
+          orientation="-skew-2"
           background="bg-[#000000]"
           textColor="text-[#B3B3B3]"
           border="border-y-2 border-y-[#ffffff]"
