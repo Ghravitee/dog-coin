@@ -8,31 +8,31 @@ body {
 }
 
 .hero-background {
-  background-image: url("../src/assets/hero-background.png");
+  background-image: url("/public/hero-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .about-background {
-  background-image: url("../src/assets/about-background.png");
+  background-image: url("/public/about-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .tokenomics-background {
-  background-image: url("../src/assets/tokenomics-background.png");
+  background-image: url("/public/tokenomics-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .stake-background {
-  background-image: url("../src/assets/stake-background.png");
+  background-image: url("/public/stake-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .buy-background {
-  background-image: url("../src/assets/buy-background.png");
+  background-image: url("/public/buy-background.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
